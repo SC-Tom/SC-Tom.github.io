@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Salecycle Email Viewer</title>
+<title>Salecycle Imp Dev Task</title>
 
 <head>
 	<meta charset="UTF-8">
@@ -9,50 +9,122 @@
 </head>
 
 <body>
-
+	<div class="navbar">
+	</div>
 	<div class="container">
-		<div class="alert alert-warning" id="alert" style="display:none;">
-		</div>
-		<div class="text-center">
-
-			<br>
-		</div>
-		<div class="text-center" style="display:block;">
-			<div class="panel panel-info col-md-6" style="border:0;" id="panel-JSON">
-				<div class="panel-heading">
-					Impression
-				</div>
-				<div class="form-group">
-					<textarea class="form-control" placeholder="Paste full impression here." style="resize: none;" rows="25" id="impressionJSON"></textarea>
-				</div>
-			</div>
-			<div class="panel panel-info col-md-6" style="border:0;" id="panel-HTML">
-				<div class="panel-heading">
-					Email Template
-				</div>
-				<div class="form-group">
-					<textarea class="form-control" placeholder="Paste email template here." style="resize: none;" rows="25" id="emailHTML"></textarea>
-				</div>
-			</div>
-			<div class="panel panel-success" id="email-panel" style="display:none; height: 800px; width:400px;">
-				<div class="panel-heading">
-					Populated Email
-				</div>
-				<div class="form-group">
-					<iframe id="outcome" style="height: 800px; width: 100%"></iframe>
-				</div>
-			</div>
+		<div class="jumbotron">
+			<h1>Hello!</h1>
+			<p>This small task will allow us to assess your Javascript knowledge and problem reasoning. You can only take this test once,
+				it should take around 1 hour. Click start when you're ready!</p>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">Start!</a></p>
 		</div>
 	</div>
-	<div class="text-center">
-		<button type="button" id="generateJSON" class="btn btn-success">Generate Email</button>
+	<div class="container">
+		<div class="page-header">
+			<h1>Question 1</h1>
+			<p>Using this site "insert site here" could you add 3 items to your basket and build a JSON Object using the below schema?</p>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Basket Schema</h3>
+			</div>
+			<div class="panel-body">
+				<pre><code>
+Basket {
+  costs: {
+    subtotal: string;
+  };
+  currency?: string;
+  items: Array<BasketItem>;
+}
+					</code></pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Basket Item Schema</h3>
+			</div>
+			<div class="panel-body">
+				<pre><code>
+BasketItem {
+  costs?: {
+    subtotal?: string;
+  };
+  product: Product;
+  quantity: number;
+}
+					</code></pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Product Schema</h3>
+			</div>
+			<div class="panel-body">
+				<pre><code>
+export interface Product {
+  name: string;
+  size: string;
+  url: string;
+  cost: string;
+}
+					</code></pre>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Example</h3>
+			</div>
+			<div class="panel-body">
+				<pre><code>
+"basket": {
+      "currency": "GBP",
+      "costs": {
+         "subtotal": "£27.00",
+      },
+      "items": [
+         {
+            "product": {
+                "costs": {
+                    subtotal: "£15.00"
+                }
+               "name": "Fuji Green Tea™ Refreshingly Purifying Cleansing Hair Scrub",
+               "url": "https://www.thebodyshop.com/en-gb/hair/treatment/fuji-green-tea-refreshingly-purifying-cleansing-hair-scrub/p/p002447",
+            },
+            "quantity": 1,
+         },
+         {
+            "product": {
+                "costs": {
+                    subtotal: "£6.00"
+                }
+               "name": "Fuji Green Tea™ Refreshingly Purifying Shampoo",
+               "url": "https://www.thebodyshop.com/en-gb/hair/shampoo/fuji-green-tea-refreshingly-purifying-shampoo/p/p002449",
+            },
+            "quantity": 1,
+         },
+         {
+            "product": {
+                "costs": {
+                    subtotal: "£6.00"
+                }
+               "name": "Banana Truly Nourishing Shampoo",
+               "url": "https://www.thebodyshop.com/en-gb/hair/shampoo/banana-truly-nourishing-shampoo/p/p002442",
+            },
+            "quantity": 1,
+         }
+      ]
+   }
+					</code></pre>
+			</div>
+		</div>
 	</div>
 </body>
 <script src="./bundle.js"></script>
 <script src="./app/bundle.js"></script>
 <footer class="footer">
 	<div class="container">
-		<p class="text-muted">SaleCycle © Email Previewer</p>
+		<p class="text-muted">SaleCycle © Imp Dev Interviewer</p>
 	</div>
 </footer>
 
