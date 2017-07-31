@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<base href="/">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
 </head>
 
 <body>
@@ -19,10 +20,43 @@
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Start!</a></p>
 		</div>
 	</div>
+	<div class="container text-center">
+		<div class="col-md-7 col-sm-12 text-left" id="basketItems">
+			<ul>
+				<li class="row list-inline columnCaptions">
+					<span>QTY</span>
+					<span>ITEM</span>
+					<span>Price</span>
+				</li>
+				<li class="row cartItem">
+					<span class="quantity">2</span>
+					<a href="www.fakestore.com/items/beerKegs"><span class="itemName">Beer kegs</span></a>
+					<span class="price">$919.99</span>
+					<span class="currency" style="display:none;">USD</span>
+				</li>
+				<li class="row cartItem">
+					<span class="quantity">3</span>
+					<a href="www.fakestore.com/items/shampooBottle"><span class="itemName">Shampoo Bottle</span></a>
+					<span class="price">$269.45</span>
+					<span class="currency" style="display:none;">USD</span>
+				</li>
+				<li class="row cartItem">
+					<span class="quantity">1</span>
+					<a href="www.fakestore.com/items/poundOfBeef"><span class="itemName">Pound of beef</span></a>
+					<span class="price">$269.45</span>
+					<span class="currency" style="display:none;">USD</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="page-header">
 			<h1>Question 1</h1>
-			<p> <blockquote>Using this site could you add 3 items to your basket and build a JSON Object using the below schema?</blockquote></p>
+			<p>
+				<blockquote>Using the basket above, could you build a JSON Object using the example below as a guide for those 3 items. Paste your
+					code into the box below.</blockquote>
+			</p>
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -69,8 +103,16 @@
       ]
    }
 					</code></pre>
+				<textarea style="width:100%; height:600px" id="questionOne"> </textarea>
 			</div>
 		</div>
+		<div class="page-header">
+			<h1>Bonus Question</h1>
+			<p>
+				<blockquote>Could you push your code into a GitHub repo and paste the link in the text area below.</blockquote>
+			</p>
+		</div>
+		<textarea style="width:100%" id="bonusQuestion"> </textarea>
 	</div>
 </body>
 <script src="./bundle.js"></script>
