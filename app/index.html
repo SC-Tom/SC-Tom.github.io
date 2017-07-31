@@ -16,13 +16,14 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Hello!</h1>
-			<p>This small task will allow us to assess your Javascript knowledge and problem reasoning. You can only take this test once,
-				it should take around 1 hour. Click start when you're ready!</p>
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Start!</a></p>
+			<p>This small task will allow us to assess your Javascript/Dom knowledge and problem reasoning.
+				</br>
+				It should take around 1-2 hours. Click start when you're ready!</p>
+			<p><a class="btn btn-primary btn-lg" id="startButton" href="#" role="button">Start!</a></p>
 		</div>
 	</div>
 
-	<div class="questions">
+	<div style="display:none" ; class="questions">
 		<div class="container text-center">
 			<div class="col-md-7 col-sm-12 text-left" id="basketItems">
 				<ul>
@@ -62,8 +63,11 @@
 			<div class="page-header">
 				<h1>Question 1</h1>
 				<p>
-					<blockquote>Using the basket above, could you build a JSON Object using the example below as a guide for those 3 items. Paste your
-						code into the box below.</blockquote>
+					<blockquote>Using the basket above & basic CSS selectors
+						</br>
+						<code>document.querySelector('#id')</code> or <code> document.querySelector('.class')</code>
+						</br>
+						could you replicate the example schema below. Paste your code that outputs the JSON object into the box below.</blockquote>
 				</p>
 			</div>
 			<div class="panel panel-default">
@@ -82,56 +86,47 @@
             "product": {
                 "costs": {
                     subtotal: "£15.00"
-                }
+                },
                "name": "Fuji Green Tea™ Refreshingly Purifying Cleansing Hair Scrub",
                "url": "https://www.thebodyshop.com/en-gb/hair/treatment/fuji-green-tea-refreshingly-purifying-cleansing-hair-scrub/p/p002447",
             },
-            "quantity": 1,
+            "quantity": 1
          },
          {
             "product": {
                 "costs": {
                     subtotal: "£6.00"
-                }
+                },
                "name": "Fuji Green Tea™ Refreshingly Purifying Shampoo",
                "url": "https://www.thebodyshop.com/en-gb/hair/shampoo/fuji-green-tea-refreshingly-purifying-shampoo/p/p002449",
             },
-            "quantity": 1,
+            "quantity": 1
          },
          {
             "product": {
                 "costs": {
                     subtotal: "£6.00"
-                }
+                },
                "name": "Banana Truly Nourishing Shampoo",
                "url": "https://www.thebodyshop.com/en-gb/hair/shampoo/banana-truly-nourishing-shampoo/p/p002442",
             },
-            "quantity": 1,
+            "quantity": 1
          }
       ]
    }
 					</code></pre>
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Code:</h3>
-				</div>
-				<div class="panel-body">
-					<textarea style="width:100%; height:600px" id="questionOne"> </textarea>
-				</div>
-			</div>
-			<div class="page-header">
-				<h1>Bonus Question</h1>
-				<p>
-					<blockquote>Could you push your code into a GitHub repo and paste the link in the text area below.</blockquote>
-				</p>
-			</div>
-			<textarea style="width:100%" id="bonusQuestion"> </textarea>
 			</br>
-			<p><strong> When you're happy with your answers, click submit! </strong></p>
-			<button type="button" class="btn btn-success">Submit</button>
+			<blockquote>
+				<strong>
+				When you are happy with your code could you push it up to a Github Repo and email the link to @ scott.scott@salecycle.com
+			</strong>
+			</blockquote>
 		</div>
+		<div class="footer">
+		</div>
+
 	</div>
 </body>
 <script src="./bundle.js"></script>
