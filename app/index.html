@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Salecycle Email Viewer</title>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<base href="/">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="alert alert-warning" id="alert" style="display:none;">
+		</div>
+		<div class="text-center">
+
+			<br>
+		</div>
+		<div class="text-center" style="display:block;">
+			<div class="panel panel-info col-md-6" style="border:0;" id="panel-JSON">
+				<div class="panel-heading">
+					Impression
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" placeholder="Paste full impression here." style="resize: none;" rows="25" id="impressionJSON"></textarea>
+				</div>
+			</div>
+			<div class="panel panel-info col-md-6" style="border:0;" id="panel-HTML">
+				<div class="panel-heading">
+					Email Template
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" placeholder="Paste email template here." style="resize: none;" rows="25" id="emailHTML"></textarea>
+				</div>
+			</div>
+			<div class="panel panel-success" id="email-panel" style="display:none; height: 800px; width:400px;">
+				<div class="panel-heading">
+					Populated Email
+				</div>
+				<div class="form-group">
+					<iframe id="outcome" style="height: 800px; width: 100%"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center">
+		<button type="button" id="generateJSON" class="btn btn-success">Generate Email</button>
+	</div>
+</body>
+<script src="./bundle.js"></script>
+<script src="./app/bundle.js"></script>
+<footer class="footer">
+	<div class="container">
+		<p class="text-muted">SaleCycle © Email Previewer</p>
+	</div>
+</footer>
+
+</html>
