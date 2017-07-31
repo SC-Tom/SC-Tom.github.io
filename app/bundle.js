@@ -1600,7 +1600,7 @@
 	    questionsEl.style.display = 'block';
 	    jumbotronEl.style.display = 'none';
 	};
-
+// comment.
 	if (startButton) {
 	    startButton.addEventListener('click', function () {
 	        hideHiddenFields();
